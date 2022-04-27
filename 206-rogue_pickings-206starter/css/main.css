@@ -40,6 +40,7 @@ h3 {
 p {
 	font-size: .875em;
 	line-height: 21px;
+	padding: 1em;
 }
 
 /*The widths are in a percentage!*/
@@ -50,11 +51,16 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
+	border-bottom: 3px solid #77a466;
+	width:100%;
 }
 
 header h1 {
 	margin: 0;
 	padding: 1em 0 0;
+	width:100%;
+	text-align: center;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
@@ -185,12 +191,38 @@ footer span {
 /*Media Queries*/
 @media all and (min-width:768px) {
     /* Tablet styles here */
- nav{
-
+ .bottom-section{
+	 flex-flow:row nowrap;
+	 align-items:flex-start;
+ }
+	 .section-one,
+	 .section-two,
+	 .section-three {
+		 width: 33%;
+		 align-items: center;
+ }
+ .section-two {
+ 	border-left: 1px solid #eee;
+ 	border-right: 1px solid #eee;
  }
 }
 
 @media all and (min-width:1200px) {
     /* Desktop styles here */
-
+header{
+	flex-flow: row nowrap;
+}
+header nav ul{
+	display:flex;
+	flex-flow: row nowrap;
+}
+header nav{
+	width:40%;
+}
+header h1 {
+    width: 60%;
+    padding:2em 0;
+    border-bottom: none;
+    text-align: left;
+  }
 }
